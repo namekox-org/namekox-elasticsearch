@@ -25,5 +25,5 @@ class ElasticSearchProxy(object):
         self.options.update(options)
         config = self.configs.get(dbname, {}).copy()
         config.update(self.options)
-        connections.configure(**{dbname: config})
+        connections.create_connection(dbname, **config)
         return self

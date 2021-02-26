@@ -24,7 +24,7 @@ class ElasticSearchHelper(Dependency):
     def setup(self):
         config = self.configs.get(self.dbname, {}).copy()
         config.update(self.config)
-        connections.configure(**{self.dbname: config})
+        connections.create_connection(self.dbname, **config)
 
     def stop(self):
         return connections.remove_connection(self.dbname)
