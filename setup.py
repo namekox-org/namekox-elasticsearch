@@ -16,14 +16,14 @@ readme = open(os.path.join(curdir, 'READIT.md'), 'rb', 'utf-8').read()
 
 setup(
     name='namekox-elasticsearch',
-    version='7.0.1',
+    version='7.0.2',
     description='namekox elasticsearch',
     long_description=readme,
     long_description_content_type='text/markdown',
     author='forcemain',
     url='https://forcemain.github.io/',
     packages=find_packages(exclude=['test', 'test.*']),
-    install_requires=["namekox-core>=0.0.1", "elasticsearch-dsl>=7.0.0,<8.0.0"],
+    install_requires=["namekox-core", "elasticsearch-dsl>=7.0.0,<8.0.0"],
     zip_safe=True,
     license='Apache License, Version 2.0',
     classifiers=[
